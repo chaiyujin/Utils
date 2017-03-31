@@ -29,17 +29,17 @@ namespace Yuki {
 #endif
 #endif
 
-#define LOG(fmt, args) \
+#define LOG(fmt, ...) \
 	if (NOTICE <= RUNTIME_LOG_LEVEL) {\
-		printf(fmt, ##args);\
+		printf("[LOG] "); printf(fmt, ##__VA_ARGS__);\
 	}
-#define DEBUG(fmt, args) \
+#define DEBUG(fmt, ...) \
 	if (DEBUG <= RUNTIME_LOG_LEVEL) {\
-		printf(fmt, ##args);\
+		printf("[DEBUG] "); printf(fmt, ##__VA_ARGS__);\
 	}
-#define ERROR(fmt, args) do {\
+#define ERROR(fmt, ...) do {\
 	printf("Error in [%s] (line: %d) : ", __FUNCTION__, __LINE__);\
-	printf(fmt, args);\
+	printf(fmt, ##__VA_ARGS__);\
 	system("pause");exit(1); } while (0);
 #define CHECK(assertion) do {\
 		bool flag = assertion;\
