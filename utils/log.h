@@ -1,13 +1,13 @@
 /* -----------------------------
 * File   : log.h
 * Author : Yuki Chai
-* Created: 2017.3.29
+* Created: 2017.03.29
 * Project: Yuki
 */
 
 #pragma once
-#ifndef __YUKI_LOG_H__
-#define __YUKI_LOG_H__
+#ifndef __YUKI_UTILS_LOG_H__
+#define __YUKI_UTILS_LOG_H__
 
 // #define CHECK_LEVEL_NONE // uncomment this line to disable runtime check
 
@@ -50,4 +50,4 @@ namespace Yuki {
 	} while (0);
 }
 
-#endif  // !__YUKI_LOG_H__
+#endif  // !__YUKI_UTILS_LOG_H__

@@ -1,6 +1,12 @@
+/* -----------------------------
+* File   : defines.h
+* Author : Yuki Chai
+* Created: 2017.03.31
+* Project: Yuki
+*/
 #pragma once
-#ifndef __YUKI_H__
-#define __YUKI_H__
+#ifndef __YUKI_UTILS_DEFINES_H__
+#define __YUKI_UTILS_DEFINES_H__
 
 #include <cstdarg>
 #include <cstdlib>
@@ -23,21 +29,22 @@
 #define RangeDEC(x, s, e, step) \
 	for (typename std::remove_cv<typename std::remove_reference<decltype(e)>::type>::type x = e - 1; x >= (s); x -= step)
 
-/* some simple functions */
+namespace Yuki {
+	/* some simple functions */
+	// square of x
+	template <class T>
+	inline T sqr(T x) { return x * x; }
 
-// square of x
-template <class T>
-inline T sqr(T x) { return x * x; }
-
-// equal 
-inline bool equal(float x, float y) {
-	return fabs(x - y) < 0.000001;
-}
-inline bool equal(double x, double y) {
-	return fabs(x - y) < 0.00000001;
-}
-inline bool equal(int x, int y) {
-	return x == y;
+	// equal 
+	inline bool equal(float x, float y) {
+		return fabs(x - y) < 0.000001;
+	}
+	inline bool equal(double x, double y) {
+		return fabs(x - y) < 0.00000001;
+	}
+	inline bool equal(int x, int y) {
+		return x == y;
+	}
 }
 
-#endif  // !__YUKI_H__
+#endif  // !__YUKI_UTILS_DEFINES_H__

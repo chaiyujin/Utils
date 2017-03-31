@@ -1,6 +1,12 @@
+/* -----------------------------
+* File   : config.h
+* Author : Yuki Chai
+* Created: 2017.03.31
+* Project: Yuki
+*/
 #pragma once
-#ifndef __YUKI_CONFIG_H__
-#define __YUKI_CONFIG_H__
+#ifndef __YUKI_UTILS_CONFIG_H__
+#define __YUKI_UTILS_CONFIG_H__
 
 #include <map>
 #include <string>
@@ -51,4 +57,4 @@ namespace Yuki {
 	};
 }
 
-#endif  // !__YUKI_CONFIG_H__
+#endif  // !__YUKI_UTILS_CONFIG_H__

@@ -1,6 +1,12 @@
+/* -----------------------------
+* File   : timer.h
+* Author : Yuki Chai
+* Created: 2017.03.31
+* Project: Yuki
+*/
 #pragma once
-#ifndef __UTILS_TIMER_H__
-#define __UTILS_TIMER_H__
+#ifndef __YUKI_UTILS_TIMER_H__
+#define __YUKI_UTILS_TIMER_H__
 
 #include <chrono>
 #include <string>
@@ -94,4 +100,4 @@ namespace Yuki {
 
 }
 
-#endif  // !__UTILS_TIMER_H__
+#endif  // !__YUKI_UTILS_TIMER_H__

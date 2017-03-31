@@ -1,6 +1,12 @@
+/* -----------------------------
+* File   : directory.h
+* Author : Yuki Chai
+* Created: 2017.03.31
+* Project: Yuki
+*/
 #pragma once
-#ifndef __YUKI_DIRECTORY_H__
-#define __YUKI_DIRECTORY_H__
+#ifndef __YUKI_UTILS_DIRECTORY_H__
+#define __YUKI_UTILS_DIRECTORY_H__
 
 #include <io.h>
 #include <stdlib.h>
@@ -132,4 +138,4 @@ namespace Yuki {
     };
 }
 
-#endif  // !__YUKI_DIRECTORY_H__
+#endif  // !__YUKI_UTILS_DIRECTORY_H__

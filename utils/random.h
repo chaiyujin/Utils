@@ -5,8 +5,8 @@
 * Project: Yuki
 */
 #pragma once
-#ifndef __YUKI_RANDOM_H__
-#define __YUKI_RANDOM_H__
+#ifndef __YUKI_UTILS_RANDOM_H__
+#define __YUKI_UTILS_RANDOM_H__
 
 #include <random>
 using std::random_device;
@@ -40,4 +40,4 @@ namespace Yuki {
     };
 }
 
-#endif // !__YUKI_RANDOM_H__
+#endif // !__YUKI_UTILS_RANDOM_H__
