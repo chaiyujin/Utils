@@ -39,6 +39,9 @@ namespace Yuki {
 	}
 #define ERROR(fmt, ...) do {\
 	printf("Error in [%s] (line: %d) : ", __FUNCTION__, __LINE__);\
+	printf(fmt, ##__VA_ARGS__); } while (0);
+#define ERROR_EXIT(fmt, ...) do {\
+	printf("Error in [%s] (line: %d) : ", __FUNCTION__, __LINE__);\
 	printf(fmt, ##__VA_ARGS__);\
 	system("pause");exit(1); } while (0);
 #define CHECK(assertion) do {\
