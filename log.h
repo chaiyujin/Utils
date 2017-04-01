@@ -11,6 +11,7 @@
 
 // #define CHECK_LEVEL_NONE // uncomment this line to disable runtime check
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -23,18 +24,18 @@ namespace Yuki {
 
 #ifndef RUNTIME_LOG_LEVEL
 #ifdef NDEBUG
-#define RUNTIME_LOG_LEVEL NOTICE
+#define RUNTIME_LOG_LEVEL Yuki::LOG_LEVEL::NOTICE
 #else
-#define RUNTIME_LOG_LEVEL DEBUG
+#define RUNTIME_LOG_LEVEL Yuki::LOG_LEVEL::DEBUG
 #endif
 #endif
 
 #define LOG(fmt, ...) \
-	if (NOTICE <= RUNTIME_LOG_LEVEL) {\
+	if (Yuki::LOG_LEVEL::NOTICE <= RUNTIME_LOG_LEVEL) {\
 		printf("[LOG] "); printf(fmt, ##__VA_ARGS__);\
 	}
 #define DEBUG(fmt, ...) \
-	if (DEBUG <= RUNTIME_LOG_LEVEL) {\
+	if (Yuki::LOG_LEVEL::DEBUG <= RUNTIME_LOG_LEVEL) {\
 		printf("[DEBUG] "); printf(fmt, ##__VA_ARGS__);\
 	}
 #define ERROR(fmt, ...) do {\
