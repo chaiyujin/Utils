@@ -18,15 +18,15 @@
 #include <type_traits>
 
 /* some useful definition */
-#define Range(x, y) \
+#define FOR(x, y) \
 	for (typename std::remove_cv<typename std::remove_reference<decltype(y)>::type>::type x = 0;  x < (y); ++x)
 
 // [s, e) increase from s
-#define RangeINC(x, s, e, step) \
+#define FORINC(x, s, e, step) \
 	for (typename std::remove_cv<typename std::remove_reference<decltype(e)>::type>::type x = s; x < (e); x += step)
 
 // [s, e) decrease from e - 1
-#define RangeDEC(x, s, e, step) \
+#define FORDEC(x, s, e, step) \
 	for (typename std::remove_cv<typename std::remove_reference<decltype(e)>::type>::type x = e - 1; x >= (s); x -= step)
 
 namespace Yuki {

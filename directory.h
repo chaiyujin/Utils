@@ -96,7 +96,7 @@ namespace Yuki {
 		// unix_style
 		static std::string unix_style(std::string path) {
 			std::string ret;
-			Range(i, path.length()) {
+			FOR(i, path.length()) {
 				if (path[i] == '\\') {
 					// "\\" and "\" turn into "/"
 					if (i == 0 ||
@@ -119,7 +119,7 @@ namespace Yuki {
 		static bool mkdirs(std::string path) {
 			bool ret = true;
 			path = unix_style(path);
-			Range(i, path.length()) {
+			FOR(i, path.length()) {
 				if (path[i] == '/') {
 					if (i > 0 && path[i - 1] == ':') continue; // skip such as D:/
 					std::string sub_str = path.substr(0, i);
